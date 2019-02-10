@@ -9,6 +9,6 @@ main :: IO ()
 main = do
   lensUnitTests <- LensSpec.unitTests
   defaultMain $ testGroup "All tests"
-    [ expectFail $ lensUnitTests
-    , expectFail $ LensSpec.propertyTests
+    [ lensUnitTests
+    , LensSpec.propertyTests
     ]
