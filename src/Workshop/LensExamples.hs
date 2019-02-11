@@ -22,8 +22,8 @@ data Line a =
 
 makeLenses ''Line
 
-test1 :: IO ()
-test1 = do
+example1 :: IO ()
+example1 = do
   let line1 = Line (Point 1 2) (Point 3 4)
   putStrLn $ "line1: " <> show line1
   putStrLn "simple view"
@@ -41,8 +41,8 @@ test1 = do
   print $ lineEnd . y %~ (*2) $ line1
   print $ line1 & lineEnd . y %~ (*2)
 
-test2 :: IO ()
-test2 = do
+example2 :: IO ()
+example2 = do
   let tuple1 = (3, (5, 7))
   putStrLn $ "tuple1: " <> show tuple1
   putStrLn "simple view"
@@ -60,8 +60,8 @@ test2 = do
   print $ _2 . _1 %~ (*2) $ tuple1
   print $ tuple1 & _2 . _1 %~ (*2)
 
-test3 :: IO ()
-test3 = do
+example3 :: IO ()
+example3 = do
   let tuple1 = (3, 5)
   putStrLn $ "tuple1: " <> show tuple1
   putStrLn "simple set"
@@ -73,16 +73,16 @@ test3 = do
   print $ both %~ (*2) $ tuple1
   print $ tuple1 & both %~ (*2)
 
-test4 :: IO ()
-test4 = do
+example4 :: IO ()
+example4 = do
   let tuple1 = ("Hello, ", "world!")
   putStrLn $ "tuple1: " <> show tuple1
   putStrLn "simple view"
   print $ view both tuple1
   print $ tuple1 ^. both
 
-test5 :: IO ()
-test5 = do
+example5 :: IO ()
+example5 = do
   let tuple1 = (3, (5, 7))
   putStrLn $ "tuple1: " <> show tuple1
   putStrLn "value modification"
@@ -93,8 +93,8 @@ test5 = do
                  & _1      -~ 1
                  & swap
 
-test6 :: IO ()
-test6 = do
+example6 :: IO ()
+example6 = do
   let line1 = Line (Point 1 2) (Point 3 4)
   putStrLn $ "line1: " <> show line1
   putStrLn "value modification"
@@ -102,8 +102,8 @@ test6 = do
                 & lineStart . y +~ 3
                 & lineEnd       %~ (\(Point x y) -> Point y x)
 
-test7 :: IO ()
-test7 = do
+example7 :: IO ()
+example7 = do
   let line1 = Line (Point 1 2) (Point 3 4)
   putStrLn $ "line1: " <> show line1
   print $ execState modLine1 line1
@@ -133,4 +133,4 @@ test7 = do
     pointCoordinates f (Point x y) = Point <$> f x <*> f y
 
 run :: IO ()
-run = sequence_ [ test1, test2, test3, test4, test5, test6, test7 ]
+run = sequence_ [ example1, example2, example3, example4, example5, example6, example7 ]
