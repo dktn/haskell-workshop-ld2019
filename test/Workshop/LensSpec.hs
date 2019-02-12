@@ -3,7 +3,6 @@ module Workshop.LensSpec where
 import Test.Tasty (TestTree, testGroup)
 import Test.Tasty.Hspec (testSpec)
 import Test.Tasty.Hedgehog (testProperty)
-
 import Test.Hspec (describe, it, shouldBe, shouldThrow)
 import Hedgehog (MonadGen, Range, forAll, property, (===))
 import qualified Hedgehog.Gen as Gen

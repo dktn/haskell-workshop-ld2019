@@ -24,6 +24,10 @@ dependencies:
 - mtl
 - containers
 - lens
+- aeson
+- bytestring
+- http-conduit
+- either
 
 library:
   source-dirs: src
