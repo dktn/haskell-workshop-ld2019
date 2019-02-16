@@ -80,3 +80,6 @@ changeStartYAndModifyEndXState ny1 f l = flip execState l $ do
     y .= ny1
   zoom lineEnd $ do
     x %= f
+
+run :: IO ()
+run = putStrLn "Nothing here..."
