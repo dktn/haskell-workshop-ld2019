@@ -62,6 +62,9 @@ getPersons = decodePersons <$> getJsonByteString
 
 -------------
 
+-- TASK 9: Uncomment code below and the commented fragments in tests
+-- Check if all tests pass
+
 run :: IO ()
 run = do
   personsE <- getPersons
