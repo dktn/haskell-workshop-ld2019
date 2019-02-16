@@ -10,8 +10,10 @@ main :: IO ()
 main = do
   lensUnitTests <- LensSpec.unitTests
   jsonUnitTests <- JsonSpec.unitTests
+  -- hint: add expectFail before a set of test to make the tests pass
   defaultMain $ testGroup "All tests"
-    [ expectFail $ lensUnitTests
-    , expectFail $ LensSpec.propertyTests
-    , expectFail $ jsonUnitTests
-    ]
+    -- [ lensUnitTests
+    -- , LensSpec.propertyTests
+    -- , jsonUnitTests
+    -- ]
+    [ ]
