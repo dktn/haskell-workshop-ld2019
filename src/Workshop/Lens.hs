@@ -76,3 +76,6 @@ changeStartYAndModifyEndX = undefined
 
 changeStartYAndModifyEndXState :: a -> (a -> a) -> Line a -> Line a
 changeStartYAndModifyEndXState = undefined
+
+run :: IO ()
+run = putStrLn "Nothing here..."
