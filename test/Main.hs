@@ -7,6 +7,7 @@ import qualified Workshop.LensSpec as LensSpec
 import qualified Workshop.JsonSpec as JsonSpec
 import qualified Workshop.RWSSpec  as RWSSpec
 import qualified Workshop.TreeSpec as TreeSpec
+import qualified Workshop.ParsecSpec as ParsecSpec
 
 main :: IO ()
 main = do
@@ -14,6 +15,7 @@ main = do
   jsonUnitTests <- JsonSpec.unitTests
   rwsUnitTests  <- RWSSpec.unitTests
   treeUnitTests <- TreeSpec.unitTests
+  parsecUnitTests <- ParsecSpec.unitTests
   -- hint: add expectFail before a set of test to make the tests pass
   defaultMain $ testGroup "All tests"
     [ lensUnitTests
@@ -21,4 +23,5 @@ main = do
     , jsonUnitTests
     , rwsUnitTests
     , treeUnitTests
+    , parsecUnitTests
     ]

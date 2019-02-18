@@ -8,6 +8,8 @@ import Workshop.RWSExamples as RWSExamples
 import Workshop.RWS as RWS
 import Workshop.TreeExamples as TreeExamples
 import Workshop.Tree as Tree
+import Workshop.ParsecExamples as ParsecExamples
+import Workshop.Parsec as Parsec
 
 main :: IO ()
 main = do
@@ -19,3 +21,5 @@ main = do
   RWS.run
   TreeExamples.run
   Tree.run
+  ParsecExamples.run
+  Parsec.run
