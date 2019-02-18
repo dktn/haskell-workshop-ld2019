@@ -53,7 +53,8 @@ isOrdered = undefined
 
 run :: IO ()
 run = do
-  putStrLn $ "Is tree2 subtree of tree1: " <> show (isSubtree tree2 tree1)
-  putStrLn $ "Is tree3 subtree of tree1: " <> show (isSubtree tree3 tree1)
-  putStrLn $ "isOrdered tree1: " <> show (isOrdered tree1)
-  putStrLn $ "isOrdered tree2: " <> show (isOrdered tree2)
+  putStrLn $ "Not implemented"
+  -- putStrLn $ "Is tree2 subtree of tree1: " <> show (isSubtree tree2 tree1)
+  -- putStrLn $ "Is tree3 subtree of tree1: " <> show (isSubtree tree3 tree1)
+  -- putStrLn $ "isOrdered tree1: " <> show (isOrdered tree1)
+  -- putStrLn $ "isOrdered tree2: " <> show (isOrdered tree2)
